@@ -28,6 +28,7 @@ function! airline#themes#onedark#refresh()
   endif
 
   " replace cursor grey with colors if you want
+  " TODO map terminal colors to go with gui colors
 
   let g:airline#themes#onedark#palette = {}
 
@@ -74,7 +75,7 @@ function! airline#themes#onedark#refresh()
   " Warning/Error styling code from vim-airline's ["base16" theme](https://github.com/vim-airline/vim-airline-themes/blob/master/autoload/airline/themes/base16.vim)
 
   " Warnings
-  let s:WI = [ s:colors.black.gui, s:colors.yellow.gui, s:term_black, s:term_yellow ]
+  let s:WI = [ s:colors.yellow.gui, s:colors.black.gui, s:term_yellow, s:term_black ]
   let g:airline#themes#onedark#palette.normal.airline_warning = [
        \ s:WI[0], s:WI[1], s:WI[2], s:WI[3]
        \ ]
