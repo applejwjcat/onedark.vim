@@ -27,6 +27,8 @@ function! airline#themes#onedark#refresh()
     let s:term_grey = s:colors.cursor_grey.cterm
   endif
 
+  " replace cursor grey with colors if you want
+
   let g:airline#themes#onedark#palette = {}
 
   let g:airline#themes#onedark#palette.accents = {
@@ -43,19 +45,19 @@ function! airline#themes#onedark#refresh()
         \ 'airline_c': [ group[0], '', group[2], '', '' ]
         \ }
 
-  let s:I1 = [ s:colors.black.gui, s:colors.green.gui, s:term_black, s:term_green ]
+  let s:I1 = [ s:colors.black.gui, s:colors.cursor_grey.gui, s:term_black, s:term_green ]
   let s:I2 = s:N2
   let s:I3 = [ s:colors.green.gui, s:colors.black.gui, s:term_green, '' ]
   let g:airline#themes#onedark#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
   let g:airline#themes#onedark#palette.insert_modified = g:airline#themes#onedark#palette.normal_modified
 
-  let s:R1 = [ s:colors.black.gui, s:colors.red.gui, s:term_black, s:term_red ]
+  let s:R1 = [ s:colors.black.gui, s:colors.cursor_grey.gui, s:term_black, s:term_red ]
   let s:R2 = s:N2
   let s:R3 = [ s:colors.red.gui, s:colors.black.gui, s:term_red, '' ]
   let g:airline#themes#onedark#palette.replace = airline#themes#generate_color_map(s:R1, s:R2, s:R3)
   let g:airline#themes#onedark#palette.replace_modified = g:airline#themes#onedark#palette.normal_modified
 
-  let s:V1 = [ s:colors.black.gui, s:colors.purple.gui, s:term_black, s:term_purple ]
+  let s:V1 = [ s:colors.black.gui, s:colors.cursor_grey.gui, s:term_black, s:term_purple ]
   let s:V2 = s:N2
   let s:V3 = [ s:colors.purple.gui, s:colors.black.gui, s:term_purple, '' ]
   let g:airline#themes#onedark#palette.visual = airline#themes#generate_color_map(s:V1, s:V2, s:V3)
