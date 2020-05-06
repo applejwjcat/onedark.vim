@@ -35,7 +35,7 @@ function! airline#themes#onedark#refresh()
 
   let s:N1 = [ s:colors.black.gui, s:colors.blue.gui, s:term_black, s:term_blue ]
   let s:N2 = [ s:colors.white.gui, s:colors.visual_grey.gui, s:term_white, s:term_grey ]
-  let s:N3 = [ s:colors.visual_grey.gui, s:colors.white.gui, s:term_grey, '' ]
+  let s:N3 = [ s:colors.blue.gui, s:colors.black, s:term_grey, '' ]
   let g:airline#themes#onedark#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 
   let group = airline#themes#get_highlight('vimCommand')
